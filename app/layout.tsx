@@ -4,6 +4,7 @@ import "./globals.css";
 
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/navbar";
+import { Toaster } from "@/components/ui/sonner";
 
 import { Analytics } from "@vercel/analytics/react"
 
@@ -26,8 +27,11 @@ export default function RootLayout({
         <div className="md:px-48 px-12 py-8">
           {children}
           <Analytics/>
+          <Toaster />
         </div>
+        
       </body>
+      
     </html>
   );
 }

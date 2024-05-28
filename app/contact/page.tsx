@@ -3,6 +3,8 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { toast } from "sonner"
+
 
 export default function Contact() {
   async function handleSubmit(e: any) {
@@ -23,7 +25,10 @@ export default function Contact() {
     const result = await response.json();
     if (result.success) {
         console.log(result);
+        e.target.reset();
+        
     }
+    toast("Message sent")
 }
   
   return (
