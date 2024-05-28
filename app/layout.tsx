@@ -5,6 +5,8 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/navbar";
 
+import { Analytics } from "@vercel/analytics/react"
+
 const fontSans = FontSans({weight: ['100', '300'], subsets: ["latin"], variable: '--font-sans'});
 
 export const metadata: Metadata = {
@@ -21,8 +23,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={cn("min-h-screen bg-background font-sans antialiased", fontSans.variable)}>
         <Navbar />
-        <div className="px-48 py-8">
+        <div className="md:px-48 px-12 py-8">
           {children}
+          <Analytics/>
         </div>
       </body>
     </html>

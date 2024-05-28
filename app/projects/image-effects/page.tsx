@@ -8,17 +8,26 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-
 import Autoplay from "embla-carousel-autoplay";
-
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
+import { CodeBlock, CopyBlock,dracula } from "react-code-blocks";
 
 import GuiImage from '@/public/image-effects/gui.png';
+import "./images";
+import my_code from './codeblocks'
+
+
+import { fav1, fav2, fav3, fav4, fav5, fav6, fav7 } from "./images";
+import { tg1, tg2 } from "./images"
+import { gmSF1, gmSF2, gmSF3, gmSF4, gmSF5, gmSF6, gmSF7, gmSF8 } from "./images";
+import { jackorigin, jack1, jack2, jack3, jack4, jack5, jack6} from "./images";
+import { bitwiseOrigin, orDemo, andDemo, xorDemo} from "./images";
+import { eva1, eva2, eva3, eva4, eva5, eva6, eva7, eva8, eva9, eva10, eva11, eva12, eva13, eva14, eva15, eva16, eva17} from "./images";
 
 function ImageCarousel({
-  imagePaths,
+  images,
 }: {
-  imagePaths: string[];
+  images: StaticImageData[];
 }) {
   return (
     <Carousel
@@ -33,56 +42,17 @@ function ImageCarousel({
       className="w-full max-w-screen-xl"
     >
       <CarouselContent >
-        {imagePaths.map((imagePath, index) => (
-          <CarouselItem key={index} className="basis-1/4">
+        {images.map((image, index) => (
+          <CarouselItem key={index} className="max-sm:basis-full basis-1/4">
           <div className="p-1">
             <Card>
               <CardContent className="flex aspect-square items-center justify-center p-2">
-                <img
-                  src={imagePath}
-                  alt=""
-                  className=""
-                />
-              </CardContent>
-            </Card>
-          </div>
-        </CarouselItem>
-        ))}
-      </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
-    </Carousel>
-  )
-}
-
-function ImageCarouselComparison({
-  imagePaths,
-}: {
-  imagePaths: string[];
-}) {
-  return (
-    <Carousel
-      opts={{
-        align: "start",
-      }}
-      plugins={[
-        Autoplay({
-          delay: 4000,
-        }),
-      ]}
-      className="w-full max-w-screen-xl"
-    >
-      <CarouselContent >
-        {imagePaths.map((imagePath, index) => (
-          <CarouselItem key={index} className="basis-1/2 ">
-          <div className="p-1">
-            <Card className="m-20">
-              <CardContent className="flex aspect-square items-center justify-center p-6 ">
-                <img
-                  src={imagePath}
-                  alt=""
-                  className="object-scale-down max-h-full"
-                />
+              <Image
+                src={image}
+                width={250}
+                height={250}
+                alt=""
+              />
               </CardContent>
             </Card>
           </div>
@@ -96,25 +66,25 @@ function ImageCarouselComparison({
 }
 
 function ImageComparison({
-  image1Path,
-  image2Path,
+  image1,
+  image2,
   caption,
 }:
 {
-  image1Path: string,
-  image2Path: string,
+  image1: StaticImageData,
+  image2: StaticImageData,
   caption?: string,
 }) {
   return(
     <div className="flex flex-col items-center">
-      <div className='flex flex-row items-center'>
-        <img
-          src={image1Path}
-          alt="Image A"
+      <div className='flex md:flex-row flex-col items-center'>
+        <Image
+          src={image1}
+          alt=""
         />
-        <img
-          src={image2Path}
-          alt="Image B"
+        <Image
+          src={image2}
+          alt=""
         />
       </div>
       {caption}
@@ -142,55 +112,33 @@ function ImageCaption({
   )
 }
 
-
-import { CodeBlock, CopyBlock,dracula } from "react-code-blocks";
-import { ReactNode } from "react";
-import my_code from './codeblocks'
-
-const favoriteImages : string[] = [
-  '/image-effects/favorites/1.jpg', 
-  '/image-effects/favorites/2.png', 
-  '/image-effects/favorites/3.jpg', 
-  '/image-effects/favorites/5.jpg',
-  '/image-effects/favorites/6.jpg',
-  '/image-effects/favorites/7.jpg'
-]
-
-const gmSanFranImages : string[] = [
-  '/image-effects/gmSanFran/1.jpg', 
-  '/image-effects/gmSanFran/2.jpg', 
-  '/image-effects/gmSanFran/3.jpg', 
-  '/image-effects/gmSanFran/4.jpg', 
-  '/image-effects/gmSanFran/5.jpg', 
-  '/image-effects/gmSanFran/6.jpg', 
-  '/image-effects/gmSanFran/7.jpg', 
-  '/image-effects/gmSanFran/8.jpg', 
-]
-
-const vashComparison = [
-  '/image-effects/trigun/vash.jpg', 
-  '/image-effects/trigun/vash pop art.jpg', 
-]
-
-const evaVariants = [
-  '/image-effects/evaVariants/1.jpg', 
-  '/image-effects/evaVariants/2.jpg', 
-  '/image-effects/evaVariants/3.jpg', 
-  '/image-effects/evaVariants/4.jpg', 
-  '/image-effects/evaVariants/5.jpg', 
-  '/image-effects/evaVariants/6.jpg', 
-  '/image-effects/evaVariants/7.jpg', 
-  '/image-effects/evaVariants/8.jpg', 
-  '/image-effects/evaVariants/9.jpg', 
-  '/image-effects/evaVariants/10.jpg', 
-  '/image-effects/evaVariants/11.jpg', 
-  '/image-effects/evaVariants/12.jpg', 
-  '/image-effects/evaVariants/13.jpg', 
-  '/image-effects/evaVariants/14.jpg', 
-  '/image-effects/evaVariants/15.jpg', 
-  '/image-effects/evaVariants/16.jpg', 
-  '/image-effects/evaVariants/17.jpg', 
-]
+function ImageCaption2({
+  image,
+  width,
+  height,
+  max_h,
+  caption,
+}:
+{
+  image: StaticImageData;
+  width: number;
+  height: number;
+  max_h?: number;
+  caption?: string;
+}) {
+  return(
+    <div className="flex flex-col items-center">
+      <Image
+        src={image}
+        width={width}
+        height={height}
+        alt={""}
+        className="max-h-96"
+      />
+      {caption}
+    </div>
+  )
+}
 
 export default function Project() {
   return (
@@ -202,7 +150,8 @@ export default function Project() {
       </div>
       
       <div className="flex flex-col items-center">
-        <ImageCarousel imagePaths={favoriteImages}/>
+        {/* <ImageCarousel imagePaths={favoriteImages}/> */}
+        <ImageCarousel images={[fav1, fav2, fav3, fav5, fav6, fav7]}/>
       </div>
 
       {/* TEXT SECTION 1*/}
@@ -237,14 +186,17 @@ export default function Project() {
         </div>
       </div>
 
+      <div className='flex flex-col items-center max-w-screen-xl'>
+        <ImageComparison image1={tg1} image2={tg2} caption="Vash the Stampede - AND(Crimson); Shift(left, 1)"/>
+      </div>
+      
 
-      <ImageComparison image1Path={vashComparison[0]} image2Path={vashComparison[1]} caption="Vash the Stampede - AND(Crimson); Shift(left, 1)"/>
       <div className='flex flex-col items-center'>
       <p>One of my favorite uses for this program is making these stencil/pop-art style images. The process works best on images with flat colors and clean lines.
         Anime is a good subject for this.</p>
       </div>
 
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center max-md:hidden">
         <p>Here's the implementation of the or operation on the pixels of a bitmap.</p>
         <CodeBlock text={my_code['function_bitmapOR']} language="csharp"/>
       </div>
@@ -252,16 +204,36 @@ export default function Project() {
 
       <div className="flex flex-col items-center">
         <p>The effects of each operation is really interesting:</p><br/>
-        <div className="flex flex-col max-w-2xl">
-          
-          <strong>OR</strong><p> - Black is replaced with the selected color, and white remains the same.</p>
-          <ImageCaption imagePath='/image-effects/or and xor demo/OR purple.jpg' caption="OR purple"/>
-          <br/>
+        <div className="flex flex-col max-w-2xl gap-4">
+          <ImageCaption2 image={bitwiseOrigin} width={1728} height={2592} caption="Black to White Gradient"/>
+
+          <div>
+          <p>OR - Replaces dark with selected color</p>
+          <ImageCaption2 image={orDemo} width={1728} height={2592} caption="OR(aqua)"/>
+          </div>
+
+          <div>
           <p>AND - Overlays the entire image with the selected color</p>
+          <ImageCaption2 image={andDemo} width={1728} height={2592} caption="AND(aqua)"/>
+          </div>
+
+          <div>
           <p>XOR - Does an inversion effect where black is set to the selected color, and white is the selected color's complement.</p>
+          <ImageCaption2 image={xorDemo} width={1728} height={2592} caption="XOR(aqua)"/>
+          </div>
         </div>
       </div>
 
+      <div className="flex flex-col items-center">
+        <p className="text-lg font-bold">Techniques</p><br/>
+        <div className="flex flex-col max-w-2xl gap-4">
+        <ImageCaption2 image={jackorigin} width={1639} height={922} caption="Original"/>
+          <ImageCaption2 image={jack2} width={1639} height={922} caption="Stencil art - Shift(left, 1), AND(strong color), Shift(left, 1)"/>
+          <ImageCaption2 image={jack3} width={1639} height={922} caption="Sepia background - Shift(left, 2), AND(light color)"/>
+          <ImageCaption2 image={jack4} width={1639} height={922} caption="Light stencil - Shift(left, 2), AND(light color), OR(main color[red])"/>
+          <ImageCaption2 image={jack5} width={1639} height={922} caption="Invert - XOR(white)"/>
+        </div>
+      </div>
 
       <div className="flex flex-col items-center">
         <div className="flex flex-col max-w-2xl">
@@ -274,7 +246,7 @@ export default function Project() {
           <p>And so on.</p>
           <p>Unfortunately, my function still generates duplicates, so here are the unique outputs of this image compared to the color Peach Puff with OR.</p>
         </div>
-        <ImageCarousel imagePaths={evaVariants}/>
+        <ImageCarousel images={[eva1, eva2, eva3, eva4, eva5, eva6, eva7, eva8, eva9, eva10, eva11, eva12, eva13, eva14, eva15, eva16, eva17]}/>
       </div>
 
 
@@ -282,7 +254,7 @@ export default function Project() {
       <p className="text-3xl">Gallery</p>
 
       <div className="flex flex-col items-center">
-        <ImageCarousel imagePaths={gmSanFranImages}/>
+        <ImageCarousel images={[gmSF1, gmSF2, gmSF3, gmSF4, gmSF5, gmSF6, gmSF7, gmSF8]}/>
       </div>
     </main>
   );

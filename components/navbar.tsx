@@ -55,17 +55,17 @@ const projects: {title: string; href: string; description: string}[] = [
 
 export default function Navbar() {
   return (
-    <NavigationMenu>
+    <NavigationMenu >
       <NavigationMenuList>
-        <NavigationMenuItem>
+        <NavigationMenuItem >
           <Link href="/" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              About Me
+              About
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
 
-        <NavigationMenuItem>
+        <NavigationMenuItem >
           <NavigationMenuTrigger>Experience</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
@@ -82,7 +82,7 @@ export default function Navbar() {
           </NavigationMenuContent>
         </NavigationMenuItem>
 
-        <NavigationMenuItem>
+        <NavigationMenuItem >
           <NavigationMenuTrigger>Projects</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
@@ -99,7 +99,7 @@ export default function Navbar() {
           </NavigationMenuContent>
         </NavigationMenuItem>
 
-        <NavigationMenuItem>
+        <NavigationMenuItem >
           <Link href="/blog" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Cool Stuff

@@ -4,7 +4,7 @@ export default function Experience() {
       <h1 className='text-4xl'>Coding Coach</h1>
 
       <div className="flex flex-col items-center">
-        <div className='flex max-w-3xl'>
+        <div className='flex flex-col max-w-3xl'>
           <p>I've been working at The Coder School for a year now. I really love this job.
           I teach kids and teens ages 8-16 game development. So, coding, art, music, and game design principles.
           I've built pretty close relationships with my students over the past year, so it's not really like going to work.

@@ -9,8 +9,8 @@ export default function Project() {
       
       {/* TEXT SECTION 1 --- INTRO */}
       <div className="flex flex-col items-center">
-        <div className='flex max-w-2xl'>
-          <p>I created this website with NextJS and componenets from </p> &nbsp; <a href='https://ui.shadcn.com' className="underline">shadcn-ui</a>
+        <div className='max-w-2xl'>
+          <p>I created this website with NextJS and componenets from shadcn-ui.</p>
         </div>
       </div>
       
