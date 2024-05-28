@@ -221,16 +221,16 @@ export default function Project() {
             height={500}
             alt="gui"
           />
-          ImageEffects.exe
+          <p>ImageEffects.exe</p>
         </div>
 
         <div className='max-w-2xl'>
-          This is probably my favorite personal project. I've spent hours doing different combinations of effects and I have lots of ideas for new filters that I haven't 
-          implemented yet. 
+          <p>This is probably my favorite personal project. I've spent hours doing different combinations of effects and I have lots of ideas for new filters that I haven't 
+          implemented yet. </p>
 
           <br/><br/>
 
-          My favorite feature are the bitwise operators. The function compares each pixel's RGB values to the selected comparison color like this
+          <p>My favorite feature are the bitwise operators. The function compares each pixel's RGB values to the selected comparison color like this</p>
           <br/>
           <code>r1 | r2, g1 | g2, b1 | b2</code>
           
@@ -240,41 +240,39 @@ export default function Project() {
 
       <ImageComparison image1Path={vashComparison[0]} image2Path={vashComparison[1]} caption="Vash the Stampede - AND(Crimson); Shift(left, 1)"/>
       <div className='flex flex-col items-center'>
-        One of my favorite uses for this program is making these stencil/pop-art style images. The process works best on images with flat colors and clean lines.
-        Anime is a good subject for this.
+      <p>One of my favorite uses for this program is making these stencil/pop-art style images. The process works best on images with flat colors and clean lines.
+        Anime is a good subject for this.</p>
       </div>
 
       <div className="flex flex-col items-center">
-        Here's the implementation of the or operation on the pixels of a bitmap.
+        <p>Here's the implementation of the or operation on the pixels of a bitmap.</p>
         <CodeBlock text={my_code['function_bitmapOR']} language="csharp"/>
       </div>
 
 
       <div className="flex flex-col items-center">
-        The effects of each operation is really interesting:<br/><br/>
+        <p>The effects of each operation is really interesting:</p><br/>
         <div className="flex flex-col max-w-2xl">
           
-          <div><strong>OR</strong> - Black is replaced with the selected color, and white remains the same. <br/></div>
+          <strong>OR</strong><p> - Black is replaced with the selected color, and white remains the same.</p>
           <ImageCaption imagePath='/image-effects/or and xor demo/OR purple.jpg' caption="OR purple"/>
           <br/>
-          AND - Overlays the entire image with the selected color<br/>
-          XOR - Does an inversion effect where black is set to the selected color, and white is the selected color's complement.<br/>
+          <p>AND - Overlays the entire image with the selected color</p>
+          <p>XOR - Does an inversion effect where black is set to the selected color, and white is the selected color's complement.</p>
         </div>
       </div>
 
 
       <div className="flex flex-col items-center">
         <div className="flex flex-col max-w-2xl">
-          Another option is to perform a variant of one of the bitwise operators on the image. A variant being one of the 2^6 combinations of the formula 
+          <p>Another option is to perform a variant of one of the bitwise operators on the image. A variant being one of the 2^6 combinations of the formula </p>
           <code>a | b, c | d, e | f</code>
-          <br></br>
-          OR variant 1, for example, is 
+          <p>OR variant 1, for example, is </p>
           <code>r1 | r1, r1 | r1, r1 | r1</code>
-          And variant 2 is
+          <p>And variant 2 is</p>
           <code>r1 | r1, r1 | r1, r1 | r2</code>
-          And so on.
-          <br></br>
-          Unfortunately, my function still generates duplicates, so here are the unique outputs of this image compared to the color Peach Puff with OR.
+          <p>And so on.</p>
+          <p>Unfortunately, my function still generates duplicates, so here are the unique outputs of this image compared to the color Peach Puff with OR.</p>
         </div>
         <ImageCarousel imagePaths={evaVariants}/>
       </div>

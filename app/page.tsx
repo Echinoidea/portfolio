@@ -4,14 +4,13 @@ export default function Home() {
       <h1 className='text-4xl'>About Me</h1>
 
       <div className="flex flex-col items-center">
-        <div className='flex max-w-3xl'>
-          I'm Gabriel. I'm interested in web and game development.
+        <div className='flex flex-col max-w-3xl'>
+          <p>I'm Gabriel. I'm interested in web and game development.</p>
+          <p>I'm a college senior in Florida and I'm looking for an internship.</p>
           <br/>
-          I'm a college senior in Florida and I'm looking for an internship.
-          <br/><br/>
-          If you're reading this, you've probably come from my resume. Thanks for checking out my website.
-          <br/><br/>
-          I'm going to be updating this site regularly with new projects and posts on the cool stuff tab.
+          <p>If you're reading this, you've probably come from my resume. Thanks for checking out my website.</p>
+          <br/>
+          <p>I'm going to be updating this site regularly with new projects and posts on the cool stuff tab.</p>
         </div>
       </div>
     </main>
