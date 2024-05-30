@@ -7,6 +7,8 @@ import Navbar from "@/components/navbar";
 import { Toaster } from "@/components/ui/sonner";
 
 import { Analytics } from "@vercel/analytics/react"
+import { Suspense } from "react";
+import Loading from "./loading";
 
 const fontSans = FontSans({weight: ['100', '300'], subsets: ["latin"], variable: '--font-sans'});
 
@@ -24,12 +26,13 @@ export default function RootLayout({
     <html lang="en">
       <body className={cn("min-h-screen bg-background font-sans antialiased", fontSans.variable)}>
         <Navbar />
-        <div className="md:px-48 px-12 py-8">
-          {children}
-          <Analytics/>
-          <Toaster />
-        </div>
-        
+        <Suspense fallback={<Loading/>}>
+          <div className="md:px-48 px-12 py-8">
+            {children}
+            <Analytics/>
+            <Toaster />
+          </div>
+        </Suspense>
       </body>
       
     </html>
