@@ -17,9 +17,8 @@ import "./images";
 import my_code from './codeblocks'
 
 
-import { fav1, fav2, fav3, fav4, fav5, fav6, fav7 } from "./images";
+import { fav1, fav2, fav3, fav4, fav5, fav6, fav7, fav8, fav9, fav10, fav11, fav12, fav13, fav14 } from "./images";
 import { tg1, tg2 } from "./images"
-import { gmSF1, gmSF2, gmSF3, gmSF4, gmSF5, gmSF6, gmSF7, gmSF8 } from "./images";
 import { jackorigin, jack1, jack2, jack3, jack4, jack5, jack6} from "./images";
 import { bitwiseOrigin, orDemo, andDemo, xorDemo} from "./images";
 import { eva1, eva2, eva3, eva4, eva5, eva6, eva7, eva8, eva9, eva10, eva11, eva12, eva13, eva14, eva15, eva16, eva17} from "./images";
@@ -151,7 +150,7 @@ export default function Project() {
       
       <div className="flex flex-col items-center">
         {/* <ImageCarousel imagePaths={favoriteImages}/> */}
-        <ImageCarousel images={[fav1, fav2, fav3, fav5, fav6, fav7]}/>
+        <ImageCarousel images={[fav1, fav2, fav3, fav5, fav6, fav7, fav8, fav9, fav10, fav11, fav12, fav13, fav14]}/>
       </div>
 
       {/* TEXT SECTION 1*/}
@@ -247,14 +246,6 @@ export default function Project() {
           <p>Unfortunately, my function still generates duplicates, so here are the unique outputs of this image compared to the color Peach Puff with OR.</p>
         </div>
         <ImageCarousel images={[eva1, eva2, eva3, eva4, eva5, eva6, eva7, eva8, eva9, eva10, eva11, eva12, eva13, eva14, eva15, eva16, eva17]}/>
-      </div>
-
-
-      {/* GALLERY */}
-      <p className="text-3xl">Gallery</p>
-
-      <div className="flex flex-col items-center">
-        <ImageCarousel images={[gmSF1, gmSF2, gmSF3, gmSF4, gmSF5, gmSF6, gmSF7, gmSF8]}/>
       </div>
     </main>
   );

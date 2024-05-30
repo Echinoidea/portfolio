@@ -13,6 +13,21 @@ import fav6 from '@/public/image-effects/favorites/6.jpg';
 export {fav6};
 import fav7 from '@/public/image-effects/favorites/7.jpg';
 export {fav7};
+import fav8 from '@/public/image-effects/gallery/1.jpg';
+export {fav8};
+import fav9 from '@/public/image-effects/gallery/2.jpg';
+export {fav9};
+import fav10 from '@/public/image-effects/gallery/3.jpg';
+export {fav10};
+import fav11 from '@/public/image-effects/gallery/4.jpg';
+export {fav11};
+import fav12 from '@/public/image-effects/gallery/5.jpg';
+export {fav12};
+import fav13 from '@/public/image-effects/gallery/6.jpg';
+export {fav13};
+import fav14 from '@/public/image-effects/gallery/7.jpg';
+export {fav14};
+
 
 // Trigun
 import tg1 from '@/public/image-effects/trigun/vash.jpg';
