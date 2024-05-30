@@ -49,6 +49,12 @@ const projects: {title: string; href: string; description: string}[] = [
     description:
       "This website"
   },
+  {
+    title: "PSX Racing",
+    href: "/projects/psx-racing",
+    description:
+      "Work-in-progress PS1 style racing game made with Godot"
+  },
 ]
 
 

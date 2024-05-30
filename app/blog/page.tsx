@@ -42,7 +42,11 @@ export default function Blog() {
       
       <div className="flex flex-col items-center">
         <div className="flex flex-col gap-8 max-w-screen-lg w-full">
-        <Post title='River Runner' date='5/23/2024' category="Tech">
+          <Post title='Seamless Texture Generator' date='5/28/2024' category="Tech">
+            <p>This website has helped me a few times when prototyping games.</p>
+            <a href="https://www.imgonline.com.ua/eng/make-seamless-texture.php">https://www.imgonline.com.ua/eng/make-seamless-texture.php</a>
+          </Post>
+          <Post title='River Runner' date='5/23/2024' category="Tech">
             <p>Follow a drop of water's path to an ocean from anywhere in the world.</p>
             <a href="https://river-runner-global.samlearner.com">https://river-runner-global.samlearner.com</a>
           </Post>
@@ -70,7 +74,7 @@ export default function Blog() {
           </Post>
           
           <Post title='First Post' date='5/23/2024' category="Misc.">
-            <p>Hi, this is my first post.</p>
+            <p>Hi, this is my first post. This blog feels a little bit cheesy but it's more for myself than anything.</p>
           </Post>
         </div>
       </div>
