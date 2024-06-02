@@ -17,7 +17,7 @@ export default function Experience() {
           </p>
           <br></br>
           <p>
-            To keep a similar tech stack, we plan on using React Expo to develop the app. Development is planned to begin in mid-June and finish by the end of the summer.
+            To keep a similar tech stack, we plan on using React Native with Expo to develop the app. Development is planned to begin in mid-June and finish by the end of the summer.
           </p>
         </div>
       </div>

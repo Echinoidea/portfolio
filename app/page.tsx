@@ -8,9 +8,7 @@ export default function Home() {
           <p>I'm Gabriel. I'm interested in web and game development.</p>
           <p>I'm a college senior in Florida and I'm looking for an internship.</p>
           <br/>
-          <p>If you're reading this, you've probably come from my resume. Thanks for checking out my website.</p>
-          <br/>
-          <p>I'm going to be updating this site regularly with new projects and posts on the cool stuff tab.</p>
+          <p>Thanks for checking out my website. I'm going to be updating it regularly with new projects.</p>
         </div>
       </div>
     </main>
