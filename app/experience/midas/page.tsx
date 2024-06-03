@@ -14,12 +14,12 @@ export default function Experience() {
             refocusing curriculums, and so on.
           </p>
   
-          <Image
+          {/* <Image
           src={midasScreenshot}
           width={1879}
           height={931}
           alt="Dashboard Screenshot"
-          />
+          /> */}
 
           <p>
             I'm working with one other developer and a group of researchers to create a website using NextJS that will be used by school counsellors, teachers, and researchers. 
