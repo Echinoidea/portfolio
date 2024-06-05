@@ -144,7 +144,7 @@ export default function Project() {
     <main className="flex flex-col min-h-screen gap-16">
       {/* HEADER AND CAROUSEL  */}
       <div>
-        <h1 className='text-4xl'>Image Effects</h1>
+        <h1 className='text-4xl text-green-600'>Image Effects</h1>
         <a href='https://github.com/Echinoidea/ImageEffects'>https://github.com/Echinoidea/ImageEffects</a>
       </div>
       

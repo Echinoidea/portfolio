@@ -3,7 +3,7 @@ export default function Project() {
     <main className="flex flex-col min-h-screen gap-8">
       {/* HEADER */}
       <div>
-        <h1 className='text-4xl'>Portfolio</h1>
+        <h1 className='text-4xl text-green-600'>Portfolio</h1>
         <a href='https://github.com/Echinoidea/Portfolio'>https://github.com/Echinoidea/Portfolio</a>
       </div>
       

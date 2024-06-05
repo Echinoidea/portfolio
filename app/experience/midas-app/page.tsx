@@ -1,7 +1,7 @@
 export default function Experience() {
   return (
     <main className="flex min-h-screen flex-col gap-8">
-      <h1 className='text-4xl'>Project MIDAS - Mobile Developer</h1>
+      <h1 className='text-4xl text-green-600'>Project MIDAS - Mobile Developer</h1>
 
       <div className="flex flex-col items-center">
         <div className='flex flex-col max-w-3xl'>

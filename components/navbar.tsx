@@ -3,12 +3,10 @@
 import {
   NavigationMenu,
   NavigationMenuContent,
-  NavigationMenuIndicator,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  NavigationMenuViewport,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 import { cn } from "@/lib/utils";
@@ -66,7 +64,7 @@ export default function Navbar() {
         <NavigationMenuItem >
           <Link href="/" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              About
+              Home
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>

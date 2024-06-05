@@ -3,7 +3,7 @@ export default function Project() {
     <main className="flex flex-col min-h-screen gap-8">
       {/* HEADER */}
       <div>
-        <h1 className='text-4xl'>PSX Racing</h1>
+        <h1 className='text-4xl text-green-600'>PSX Racing</h1>
       </div>
       
       {/* TEXT SECTION 1 --- INTRO */}
