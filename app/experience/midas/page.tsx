@@ -13,16 +13,9 @@ export default function Experience() {
             to create a future risk predictor index. This data can then be used to proactively help these at risk groups by knowing where to allocate funds,
             refocusing curriculums, and so on.
           </p>
-  
-          {/* <Image
-          src={midasScreenshot}
-          width={1879}
-          height={931}
-          alt="Dashboard Screenshot"
-          /> */}
 
           <p>
-            I'm working with one other developer and a group of researchers to create a website using NextJS that will be used by school counsellors, teachers, and researchers. 
+            I'm working with one other developer and a group of researchers to create a website using Next.js that will be used by school counsellors, teachers, and researchers. 
           </p>
           <br></br>
           <p>The main features are as follows: </p>
@@ -41,15 +34,16 @@ export default function Experience() {
           </div>
 
           <div>
-            <p>Tech stack:</p>
+            <p>Tech stack and Libraries:</p>
             <p>- Next.js with TypeScript</p>
             <p>- Next UI</p>
-            <p>- Tremor</p>
             <p>- Tailwind CSS</p>
             <p>- PostgreSQL with Supabase</p>
+            <p>- Nivo (for charts)</p>
+            <p>- NextAuth (for authentication)</p>
           </div>
 
-          <p>Projected viable product release date is mid July for trialing. 10 schools are participating in the trial.</p>
+          <p>Projected minimum viable product release date is July 1st for trialing. 10 schools are participating in the trial.</p>
         </div>
       </div>
     </main>
