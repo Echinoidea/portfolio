@@ -12,15 +12,10 @@ export default function Experience() {
           
           <br/><br/>
 
-          <p>A lot of my students like to make games in Roblox, so I've learned quite a bit of Lua. I never expected to learn how
-          to make games in Roblox before this job, but now I'm a very experienced Roblox developer.</p>
-          
-          <br/><br/>
-
-          <p>Some students aren't interested in Roblox, so I also teach PyGame, Godot, and React web development.
-          I've recently discovered Godot and I'm really loving it, so I've been trying to get my non-Roblox students into Godot.
-          The UI is efficient, and the node parent-child structure is intuitive and easy to teach. In Godot, I can guide one of my students to make
-          a simple 2D game in only one or two classes compared to Unity, which would take way longer.</p>
+          <p>Most of my students are interested in development with Roblox which uses Lua. I've become quite good with Lua and Roblox development.
+            For my students that aren't interested in Unity, we do Unity, Python, and web development. I'm also teaching one of my students how to make Minecraft mods 
+            with Java. 
+          </p>
 
           <br/><br/>
 

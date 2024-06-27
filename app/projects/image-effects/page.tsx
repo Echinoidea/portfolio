@@ -204,7 +204,7 @@ export default function Project() {
       <div className="flex flex-col items-center">
         <p>The effects of each operation is really interesting:</p><br/>
         <div className="flex flex-col max-w-2xl gap-4">
-          <ImageCaption2 image={bitwiseOrigin} width={1728} height={2592} caption="Black to White Gradient"/>
+          <ImageCaption2 image={bitwiseOrigin} width={1728} height={2592} caption="INPUT - Black to White Gradient"/>
 
           <div>
           <p>OR - Replaces dark with selected color</p>

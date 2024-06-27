@@ -103,13 +103,13 @@ export default function Navbar() {
           </NavigationMenuContent>
         </NavigationMenuItem>
 
-        <NavigationMenuItem >
+        {/* <NavigationMenuItem >
           <Link href="/blog" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Cool Stuff
             </NavigationMenuLink>
           </Link>
-        </NavigationMenuItem>
+        </NavigationMenuItem> */}
 
         <NavigationMenuItem>
           <Link href="/contact" legacyBehavior passHref>

@@ -9,7 +9,7 @@ export default function Project() {
       {/* TEXT SECTION 1 --- INTRO */}
       <div className="flex flex-col items-center gap-4">
         <div className='max-w-2xl'>
-          <p>I love Need for Speed III and I love drum and bass music so I wanted to make my own PS1 style racing game with DnB that I've made.</p>
+          <p>I love Need for Speed III, Ridge Racer 4, and drum and bass music so I wanted to make my own PS1 style racing game with DnB that I've made.</p>
           <p>This is a new project and I'm just prototyping right now. I'll be updating this page as I continue development.</p>
         </div>
 
