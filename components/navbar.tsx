@@ -15,22 +15,28 @@ import React from "react";
 
 const experiences: {title: string; href: string; description: string}[] = [
   {
-    title: "Project MIDAS - Web Developer",
+    title: "Project MIDAS - Full-stack",
     href: "/experience/midas",
     description:
       "Full-stack web developer for a school psychology analytics research group."
   },
   {
-    title: "MIDAS App - Mobile Developer",
+    title: "SAEBRS Early Childhood - Web dev & research",
     href: "/experience/midas-app",
     description:
-      "Cross-platform mobile app developer for data collection and surveying regarding student mental health."
+      "Web-based app developer for data collection and surveying student mental health."
   },
   {
     title: "Coding Coach",
     href: "/experience/coder-school",
     description:
       "Teaching kids and teens game design and coding."
+  },
+  {
+    title: "Coder Fair - Front-end designer/developer",
+    href: "/experience/coder-fair",
+    description:
+      "Social website for students to upload and browse projects from The Coder School."
   },
 ]
 
@@ -42,17 +48,23 @@ const projects: {title: string; href: string; description: string}[] = [
       "Perform unique operations on images with bitwise operations and pixel sorting."
   },
   {
+    title: "CourierPath",
+    href: "/projects/courier-path",
+    description:
+      "Website/app for food delivery workers to track and optimize their earnings."
+  },
+  {
     title: "Portfolio",
     href: "/projects/portfolio",
     description:
       "This website"
   },
-  {
-    title: "PSX Racing",
-    href: "/projects/psx-racing",
-    description:
-      "Work-in-progress PS1 style racing game made with Godot"
-  },
+  // {
+  //   title: "PSX Racing",
+  //   href: "/projects/psx-racing",
+  //   description:
+  //     "Work-in-progress PS1 style racing game made with Godot"
+  // },
 ]
 
 
