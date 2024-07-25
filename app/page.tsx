@@ -12,9 +12,16 @@ export default function Home() {
           <p>I'm a college senior in Florida and I'm looking for an internship.</p>
           <br/>
           <p>Thanks for checking out my website. I'm going to be updating it regularly with new projects.</p>
+
+          
         </div>
 
+        <Link href="https://github.com/Echinoidea" className="text-2xl underline underline-offset-2">GitHub</Link>
+
+
         <div className="flex flex-col items-center gap-2">
+          
+
           <p className="text-2xl font-medium mb-4">Featured Pages</p>
           
           <Link href="/projects/image-effects" className="text-xl w-full">
