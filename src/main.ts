@@ -24,7 +24,7 @@ const render = () => {
   const path = window.location.pathname;
   app.innerHTML = routes[path as keyof typeof routes] || '<h1>Page Not Found</h1>';
 
-  if (path === '/imgmod.html') {
+  if (path === '/imgmod') {
     populateImages();
   }
 };
