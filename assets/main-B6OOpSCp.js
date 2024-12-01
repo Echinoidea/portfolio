@@ -1,4 +1,4 @@
-(function(){const o=document.createElement("link").relList;if(o&&o.supports&&o.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))a(e);new MutationObserver(e=>{for(const t of e)if(t.type==="childList")for(const i of t.addedNodes)i.tagName==="LINK"&&i.rel==="modulepreload"&&a(i)}).observe(document,{childList:!0,subtree:!0});function l(e){const t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?t.credentials="include":e.crossOrigin==="anonymous"?t.credentials="omit":t.credentials="same-origin",t}function a(e){if(e.ep)return;e.ep=!0;const t=l(e);fetch(e.href,t)}})();const n=`
+(function(){const o=document.createElement("link").relList;if(o&&o.supports&&o.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))r(e);new MutationObserver(e=>{for(const t of e)if(t.type==="childList")for(const a of t.addedNodes)a.tagName==="LINK"&&a.rel==="modulepreload"&&r(a)}).observe(document,{childList:!0,subtree:!0});function n(e){const t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?t.credentials="include":e.crossOrigin==="anonymous"?t.credentials="omit":t.credentials="same-origin",t}function r(e){if(e.ep)return;e.ep=!0;const t=n(e);fetch(e.href,t)}})();const l=`
 <div>
   <fieldset class="title bordered">
     <legend>gabriel</legend>
@@ -8,23 +8,23 @@
   <div class="row">
     <fieldset class="column bordered">
       <legend>work</legend>
-      <a href="research2">research #2</a>
-      <a href="research1">research #1</a>
-      <a href="coach">coding coach</a>
+      <a href="research2" onclick="navigate(event, '/research2')">research #2</a>
+      <a href="research1" onclick="navigate(event, '/research1')">research #1</a>
+      <a href="coach" onclick="navigate(event, '/coach')">coding coach</a>
     </fieldset>
 
     <fieldset class="column bordered">
       <legend>projects</legend>
-      <a href="/imgmod">imgmod</a>
-      <a href="/ags">ags desktop</a>
-      <a href="/timesheet">timesheet-cli</a>
+      <a href="/imgmod" onclick="navigate(event, '/imgmod')">imgmod</a>
+      <a href="/ags" onclick="navigate(event, '/ags')">ags desktop</a>
+      <a href="/timesheet" onclick="navigate(event, '/timesheet')">timesheet-cli</a>
     </fieldset>
   </div>
 
   <fieldset class="column bordered">
     <legend>contact</legend>
-    <a href="gabriel.contactme.h@gmail.com">gabriel.contactme.h@gmail.com</a>
-    <a href="https://github.com/Echinoidea">github</a>
+    <a href="mailto:gabriel.contactme.h@gmail.com">gabriel.contactme.h@gmail.com</a>
+    <a href="https://github.com/Echinoidea" target="_blank">github</a>
   </fieldset>
 </div>
 `,d=`
@@ -82,7 +82,7 @@
     <div class="two-col-grid" id="imgmod-showcase"></div>
   </fieldset>
 </div>
-`,p=`
+`,c=`
 <div>
   <fieldset class="title bordered">
     <legend style="color: #a8b377">psych research #1</legend>
@@ -106,7 +106,7 @@
     </p>
   </fieldset>
 </div>
-`,c=`
+`,p=`
 <div>
   <fieldset class="title bordered">
     <legend style="color: #a8b377">psych research #2</legend>
@@ -216,6 +216,6 @@
     </p>
   </fieldset>
 </div>
-`,u={"/":n,"/imgmod":d,"/research1.html":p,"/research2.html":c,"/coach.html":m,"/ags.html":g,"/timesheet.html":h},f=document.querySelector("#app"),r=()=>{const s=window.location.pathname;f.innerHTML=u[s]||"<h1>Page Not Found</h1>",s==="/imgmod"&&w()},y=["ultrakill.png","ultrakill-out.png","vash.jpg","vash-out.jpg","gasha-sm.gif","gasha-sm-out.png"],w=()=>{const s=document.querySelector("#imgmod-showcase");s&&(s.innerHTML=y.map(o=>`
+`,u={"/":l,"/imgmod":d,"/research1":c,"/research2":p,"/coach":m,"/ags":g,"/timesheet":h},f=document.querySelector("#app"),i=()=>{const s=window.location.pathname;f.innerHTML=u[s]||"<h1>Page Not Found</h1>",s==="/imgmod.html"&&b()},y=(s,o)=>{s.preventDefault(),history.pushState(null,"",o),i()};window.navigate=y;const w=["ultrakill.png","ultrakill-out.png","vash.jpg","vash-out.jpg","gasha-sm.gif","gasha-sm-out.png"],b=()=>{const s=document.querySelector("#imgmod-showcase");s&&(s.innerHTML=w.map(o=>`
           <img class="gridItem" src="/imgmod/${o}" alt="${o}" style="margin: 10px;" />
-        `).join(""))};r();window.addEventListener("popstate",r);
+        `).join(""))};i();window.addEventListener("popstate",i);
