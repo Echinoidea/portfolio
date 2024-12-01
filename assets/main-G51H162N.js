@@ -1,22 +1,23 @@
-(function(){const s=document.createElement("link").relList;if(s&&s.supports&&s.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))i(e);new MutationObserver(e=>{for(const n of e)if(n.type==="childList")for(const o of n.addedNodes)o.tagName==="LINK"&&o.rel==="modulepreload"&&i(o)}).observe(document,{childList:!0,subtree:!0});function r(e){const n={};return e.integrity&&(n.integrity=e.integrity),e.referrerPolicy&&(n.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?n.credentials="include":e.crossOrigin==="anonymous"?n.credentials="omit":n.credentials="same-origin",n}function i(e){if(e.ep)return;e.ep=!0;const n=r(e);fetch(e.href,n)}})();const l=`<div>
+(function(){const o=document.createElement("link").relList;if(o&&o.supports&&o.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))a(e);new MutationObserver(e=>{for(const t of e)if(t.type==="childList")for(const i of t.addedNodes)i.tagName==="LINK"&&i.rel==="modulepreload"&&a(i)}).observe(document,{childList:!0,subtree:!0});function l(e){const t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?t.credentials="include":e.crossOrigin==="anonymous"?t.credentials="omit":t.credentials="same-origin",t}function a(e){if(e.ep)return;e.ep=!0;const t=l(e);fetch(e.href,t)}})();const n=`
+<div>
   <fieldset class="title bordered">
     <legend>gabriel</legend>
-    <p>student, linux enjoyer, progammer</p>
+    <p>student, linux enjoyer, programmer</p>
   </fieldset>
 
   <div class="row">
     <fieldset class="column bordered">
       <legend>work</legend>
-      <a href="research2.html">research #2</a>
-      <a href="research1.html">research #1</a>
-      <a href="coach.html">coding coach</a>
+      <a href="research2">research #2</a>
+      <a href="research1">research #1</a>
+      <a href="coach">coding coach</a>
     </fieldset>
 
     <fieldset class="column bordered">
       <legend>projects</legend>
-      <a href="/imgmod.html">imgmod</a>
-      <a href="/ags.html">ags desktop</a>
-      <a href="/timesheet.html">timesheet-cli</a>
+      <a href="/imgmod">imgmod</a>
+      <a href="/ags">ags desktop</a>
+      <a href="/timesheet">timesheet-cli</a>
     </fieldset>
   </div>
 
@@ -26,7 +27,8 @@
     <a href="https://github.com/Echinoidea">github</a>
   </fieldset>
 </div>
-`,d=`<div>
+`,d=`
+<div>
   <fieldset class="title bordered">
     <legend style="color: #a8b377">imgmod</legend>
     <p>low level, fast image filtering program written in rust</p>
@@ -80,7 +82,8 @@
     <div class="two-col-grid" id="imgmod-showcase"></div>
   </fieldset>
 </div>
-`,p=`<div>
+`,p=`
+<div>
   <fieldset class="title bordered">
     <legend style="color: #a8b377">psych research #1</legend>
     <p>web developer for k-12 psychology research</p>
@@ -103,7 +106,8 @@
     </p>
   </fieldset>
 </div>
-`,c=`<div>
+`,c=`
+<div>
   <fieldset class="title bordered">
     <legend style="color: #a8b377">psych research #2</legend>
     <p>
@@ -120,7 +124,8 @@
     <p>i'm not allowed to disclose details of the project here.</p>
   </fieldset>
 </div>
-`,m=`<div>
+`,m=`
+<div>
   <fieldset class="title bordered">
     <legend style="color: #a8b377">coding coach</legend>
     <p>teaching kids/teens game and web development</p>
@@ -144,7 +149,8 @@
     </p>
   </fieldset>
 </div>
-`,h=`<div>
+`,g=`
+<div>
   <fieldset class="title bordered">
     <legend style="color: #a8b377">ags desktop</legend>
     <p>my sidebar and some important widgets that make up my desktop</p>
@@ -183,12 +189,13 @@
   <fieldset class="column bordered">
     <legend>showcase</legend>
 
-    <div class="" id="ags-showcase">
+    <div id="ags-showcase">
       <img src="ags/ags.png" alt="ags screenshot alt" style="max-width: 100%" />
     </div>
   </fieldset>
 </div>
-`,g=`<div>
+`,h=`
+<div>
   <fieldset class="title bordered">
     <legend style="color: #a8b377">timesheet cli</legend>
     <p>simple node.js cli to manage my timesheets</p>
@@ -209,6 +216,6 @@
     </p>
   </fieldset>
 </div>
-`,u={"/":l,"/imgmod.html":d,"/research1.html":p,"/research2.html":c,"/coach.html":m,"/ags.html":h,"/timesheet.html":g},f=["ultrakill.png","ultrakill-out.png","vash.jpg","vash-out.jpg","gasha-sm.gif","gasha-sm-out.png"],y=()=>{const t=document.querySelector("#imgmod-showcase");t&&(t.innerHTML=f.map(s=>`
-            <img class="gridItem" src="/imgmod/${s}" alt="${s}" style="margin: 10px;" />
-        `).join(""))},w=document.querySelector("#app"),a=()=>{const t=window.location.pathname;console.log(t),w.innerHTML=u[t]||"<h1>Page Not Found</h1>",t==="/imgmod.html"&&y()};a();window.addEventListener("popstate",a);
+`,u={"/":n,"/imgmod":d,"/research1.html":p,"/research2.html":c,"/coach.html":m,"/ags.html":g,"/timesheet.html":h},f=document.querySelector("#app"),r=()=>{const s=window.location.pathname;f.innerHTML=u[s]||"<h1>Page Not Found</h1>",s==="/imgmod"&&w()},y=["ultrakill.png","ultrakill-out.png","vash.jpg","vash-out.jpg","gasha-sm.gif","gasha-sm-out.png"],w=()=>{const s=document.querySelector("#imgmod-showcase");s&&(s.innerHTML=y.map(o=>`
+          <img class="gridItem" src="/imgmod/${o}" alt="${o}" style="margin: 10px;" />
+        `).join(""))};r();window.addEventListener("popstate",r);
