@@ -8,26 +8,25 @@ const mainPage = `
   <div class="row">
     <fieldset class="column bordered">
       <legend>work</legend>
-      <a href="research2">research #2</a>
-      <a href="research1">research #1</a>
-      <a href="coach">coding coach</a>
+      <a href="research2" onclick="navigate(event, '/research2')">research #2</a>
+      <a href="research1" onclick="navigate(event, '/research1')">research #1</a>
+      <a href="coach" onclick="navigate(event, '/coach')">coding coach</a>
     </fieldset>
 
     <fieldset class="column bordered">
       <legend>projects</legend>
-      <a href="/imgmod">imgmod</a>
-      <a href="/ags">ags desktop</a>
-      <a href="/timesheet">timesheet-cli</a>
+      <a href="/imgmod" onclick="navigate(event, '/imgmod')">imgmod</a>
+      <a href="/ags" onclick="navigate(event, '/ags')">ags desktop</a>
+      <a href="/timesheet" onclick="navigate(event, '/timesheet')">timesheet-cli</a>
     </fieldset>
   </div>
 
   <fieldset class="column bordered">
     <legend>contact</legend>
-    <a href="gabriel.contactme.h@gmail.com">gabriel.contactme.h@gmail.com</a>
-    <a href="https://github.com/Echinoidea">github</a>
+    <a href="mailto:gabriel.contactme.h@gmail.com">gabriel.contactme.h@gmail.com</a>
+    <a href="https://github.com/Echinoidea" target="_blank">github</a>
   </fieldset>
 </div>
 `;
 
 export default mainPage;
-
