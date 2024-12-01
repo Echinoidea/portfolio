@@ -216,6 +216,6 @@
     </p>
   </fieldset>
 </div>
-`,u={"/":l,"/imgmod":d,"/research1":c,"/research2":p,"/coach":m,"/ags":g,"/timesheet":h},f=document.querySelector("#app"),i=()=>{const s=window.location.pathname;f.innerHTML=u[s]||"<h1>Page Not Found</h1>",s==="/imgmod.html"&&b()},y=(s,o)=>{s.preventDefault(),history.pushState(null,"",o),i()};window.navigate=y;const w=["ultrakill.png","ultrakill-out.png","vash.jpg","vash-out.jpg","gasha-sm.gif","gasha-sm-out.png"],b=()=>{const s=document.querySelector("#imgmod-showcase");s&&(s.innerHTML=w.map(o=>`
+`,u={"/":l,"/imgmod":d,"/research1":c,"/research2":p,"/coach":m,"/ags":g,"/timesheet":h},f=document.querySelector("#app"),i=()=>{const s=window.location.pathname;f.innerHTML=u[s]||"<h1>Page Not Found</h1>",s==="/imgmod"&&b()},y=(s,o)=>{s.preventDefault(),history.pushState(null,"",o),i()};window.navigate=y;const w=["ultrakill.png","ultrakill-out.png","vash.jpg","vash-out.jpg","gasha-sm.gif","gasha-sm-out.png"],b=()=>{const s=document.querySelector("#imgmod-showcase");s&&(s.innerHTML=w.map(o=>`
           <img class="gridItem" src="/imgmod/${o}" alt="${o}" style="margin: 10px;" />
         `).join(""))};i();window.addEventListener("popstate",i);
