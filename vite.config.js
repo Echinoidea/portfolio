@@ -7,7 +7,7 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        main: './src/index.html',
+        main: './index.html',
         imgmod: './src/imgmod.html',
         ags: './src/ags.html',
         timesheet: './src/timesheet.html',

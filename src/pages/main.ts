@@ -1,7 +1,8 @@
+const mainPage = `
 <div>
   <fieldset class="title bordered">
     <legend>gabriel</legend>
-    <p>student, linux enjoyer, progammer</p>
+    <p>student, linux enjoyer, programmer</p>
   </fieldset>
 
   <div class="row">
@@ -26,3 +27,7 @@
     <a href="https://github.com/Echinoidea">github</a>
   </fieldset>
 </div>
+`;
+
+export default mainPage;
+
