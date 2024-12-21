@@ -1,4 +1,4 @@
-(function(){const o=document.createElement("link").relList;if(o&&o.supports&&o.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))r(e);new MutationObserver(e=>{for(const t of e)if(t.type==="childList")for(const a of t.addedNodes)a.tagName==="LINK"&&a.rel==="modulepreload"&&r(a)}).observe(document,{childList:!0,subtree:!0});function n(e){const t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?t.credentials="include":e.crossOrigin==="anonymous"?t.credentials="omit":t.credentials="same-origin",t}function r(e){if(e.ep)return;e.ep=!0;const t=n(e);fetch(e.href,t)}})();const l=`
+(function(){const a=document.createElement("link").relList;if(a&&a.supports&&a.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))r(e);new MutationObserver(e=>{for(const t of e)if(t.type==="childList")for(const i of t.addedNodes)i.tagName==="LINK"&&i.rel==="modulepreload"&&r(i)}).observe(document,{childList:!0,subtree:!0});function l(e){const t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?t.credentials="include":e.crossOrigin==="anonymous"?t.credentials="omit":t.credentials="same-origin",t}function r(e){if(e.ep)return;e.ep=!0;const t=l(e);fetch(e.href,t)}})();const n=`
 <div>
   <fieldset class="title bordered">
     <legend>gabriel</legend>
@@ -15,9 +15,9 @@
 
     <fieldset class="column bordered">
       <legend>projects</legend>
-      <a href="/imgmod" onclick="navigate(event, '/imgmod')">imgmod</a>
+      <a href="/imgfx" onclick="navigate(event, '/imgfx')">imgfx</a>
+      <a href="/vidfx" onclick="navigate(event, '/vidfx')">vidfx</a>
       <a href="/ags" onclick="navigate(event, '/ags')">ags desktop</a>
-      <a href="/timesheet" onclick="navigate(event, '/timesheet')">timesheet-cli</a>
     </fieldset>
   </div>
 
@@ -30,13 +30,18 @@
 `,d=`
 <div>
   <fieldset class="title bordered">
-    <legend style="color: #a8b377">imgmod</legend>
+    <legend style="color: #a8b377">imgfx</legend>
     <p>low level, fast image filtering program written in rust</p>
-    <a href="https://github.com/Echinoidea/img-mod">GitHub</a>
+    <br/>
+    <a href="https://github.com/Echinoidea/imgfx-cli">GitHub</a>
+      <br/>
+    <a href="https://crates.io/crates/imgfx">crates.io</a>
   </fieldset>
 
   <fieldset class="column bordered" style="margin-top: 8px">
     <p>this project is composed of a rust crate and a cli frontend for it.</p>
+    <p>this project is similar to ffmpeg's filters, but it doesn't use ffmpeg at all.</p>
+    <p>i am making this instead of using ffmpeg because i want to practice rust and also i plan on using this for a few more projects</p>
   </fieldset>
 
   <fieldset class="column bordered" style="gap: 16px">
@@ -58,10 +63,10 @@
       <p>- bloom</p>
     </div>
 
-    <p>imgmod -i &lt;path/to/input&gt; &lt;operation&gt; &lt;params&gt;</p>
+    <p>imgfx -i &lt;path/to/input&gt; &lt;operation&gt; &lt;params&gt;</p>
 
     <p>
-      imgmod writes the raw image data to stdout. if no input flag is provided,
+      imgfx writes the raw image data to stdout. if no input flag is provided,
       it will expect raw image stdin. you can use this to pipe it into itself to
       create chains of effects. this is my favorite part of the program.
     </p>
@@ -79,10 +84,10 @@
   <fieldset class="column bordered">
     <legend>showcase</legend>
 
-    <div class="two-col-grid" id="imgmod-showcase"></div>
+    <div class="two-col-grid" id="imgfx-showcase"></div>
   </fieldset>
 </div>
-`,c=`
+`,p=`
 <div>
   <fieldset class="title bordered">
     <legend style="color: #a8b377">psych research #1</legend>
@@ -106,7 +111,7 @@
     </p>
   </fieldset>
 </div>
-`,p=`
+`,c=`
 <div>
   <fieldset class="title bordered">
     <legend style="color: #a8b377">psych research #2</legend>
@@ -124,7 +129,7 @@
     <p>i'm not allowed to disclose details of the project here.</p>
   </fieldset>
 </div>
-`,m=`
+`,g=`
 <div>
   <fieldset class="title bordered">
     <legend style="color: #a8b377">coding coach</legend>
@@ -149,7 +154,7 @@
     </p>
   </fieldset>
 </div>
-`,g=`
+`,f=`
 <div>
   <fieldset class="title bordered">
     <legend style="color: #a8b377">ags desktop</legend>
@@ -194,28 +199,48 @@
     </div>
   </fieldset>
 </div>
-`,h=`
+`,m=`
 <div>
   <fieldset class="title bordered">
-    <legend style="color: #a8b377">timesheet cli</legend>
-    <p>simple node.js cli to manage my timesheets</p>
+    <legend style="color: #a8b377">vidfx</legend>
+    <p>implementation of imgfx for use on videos</p>
+    <br/>
+    <a href="https://github.com/Echinoidea/vidfx-cli">GitHub</a>
   </fieldset>
 
-  <fieldset class="column bordered" style="margin-top: 8px; gap: 16px">
-    <p>
-      this is just a simple cli application to manage my timesheets since my
-      research projects are independent and i have to log my hours. it also
-      helps for some other tasks i like to time like time spent working on a
-      particular project or programming language.
-    </p>
+  <fieldset class="column bordered" style="gap: 16px">
+    <legend>usage</legend>
+    <div>
+      <p>operations:</p>
+      <p>- or</p>
+      <p>- and</p>
+      <p>- xor</p>
+      <p>- left</p>
+      <p>- right</p>
+      <p>- add</p>
+      <p>- sub</p>
+      <p>- mult</p>
+      <p>- div</p>
+      <p>- avg</p>
+      <p>- screen</p>
+      <p>- overlay</p>
+      <p>- bloom</p>
+    </div>
+
+    <p>vidfx -i &lt;path/to/input&gt; &lt;visualization?&gt; &lt;bpm?&gt; &lt;operation&gt; &lt;params&gt;</p>
 
     <p>
-      honestly, i'm not that impressed by this project, i just wanted a third
-      project on my website. im working on some better personal projects right
-      now.
+      this program lets you oscillate an effect at a specified bpm and wave shape. this is the first step im taking to a music visualization program.
+      i want to eventually allow the user to specify an audio frequency range and then modulate the effect based on the amplitude of that range e.g. kick drum.
     </p>
+  </fieldset>
+
+  <fieldset class="column bordered">
+    <legend>showcase</legend>
+
+    <div class="two-col-grid" id="imgfx-showcase"></div>
   </fieldset>
 </div>
-`,u={"/":l,"/imgmod":d,"/research1":c,"/research2":p,"/coach":m,"/ags":g,"/timesheet":h},f=document.querySelector("#app"),i=()=>{const s=window.location.pathname;f.innerHTML=u[s]||"<h1>Page Not Found</h1>",s==="/imgmod"&&b()},y=(s,o)=>{s.preventDefault(),history.pushState(null,"",o),i()};window.navigate=y;const w=["ultrakill.png","ultrakill-out.png","vash.jpg","vash-out.jpg","gasha-sm.gif","gasha-sm-out.png"],b=()=>{const s=document.querySelector("#imgmod-showcase");s&&(s.innerHTML=w.map(o=>`
-          <img class="gridItem" src="/imgmod/${o}" alt="${o}" style="margin: 10px;" />
-        `).join(""))};i();window.addEventListener("popstate",i);
+`,h={"/":n,"/imgfx":d,"/research1":p,"/research2":c,"/coach":g,"/ags":f,"/vidfx":m},u=document.querySelector("#app"),o=()=>{const s=window.location.pathname;u.innerHTML=h[s]||"<h1>Page Not Found</h1>",s==="/imgfx"&&y()},v=(s,a)=>{s.preventDefault(),history.pushState(null,"",a),o()};window.navigate=v;const w=["ultrakill.png","ultrakill-out.png","vash.jpg","vash-out.jpg","gasha-sm.gif","gasha-sm-out.png"],y=()=>{const s=document.querySelector("#imgfx-showcase");s&&(s.innerHTML=w.map(a=>`
+          <img class="gridItem" src="/imgfx/${a}" alt="${a}" style="margin: 10px;" />
+        `).join(""))};o();window.addEventListener("popstate",o);
