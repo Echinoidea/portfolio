@@ -1,12 +1,18 @@
+const imgfxPage = `
 <div>
   <fieldset class="title bordered">
-    <legend style="color: #a8b377">imgmod</legend>
+    <legend style="color: #a8b377">imgfx</legend>
     <p>low level, fast image filtering program written in rust</p>
-    <a href="https://github.com/Echinoidea/img-mod">GitHub</a>
+    <br/>
+    <a href="https://github.com/Echinoidea/imgfx-cli">GitHub</a>
+      <br/>
+    <a href="https://crates.io/crates/imgfx">crates.io</a>
   </fieldset>
 
   <fieldset class="column bordered" style="margin-top: 8px">
     <p>this project is composed of a rust crate and a cli frontend for it.</p>
+    <p>this project is similar to ffmpeg's filters, but it doesn't use ffmpeg at all.</p>
+    <p>i am making this instead of using ffmpeg because i want to practice rust and also i plan on using this for a few more projects</p>
   </fieldset>
 
   <fieldset class="column bordered" style="gap: 16px">
@@ -28,10 +34,10 @@
       <p>- bloom</p>
     </div>
 
-    <p>imgmod -i &lt;path/to/input&gt; &lt;operation&gt; &lt;params&gt;</p>
+    <p>imgfx -i &lt;path/to/input&gt; &lt;operation&gt; &lt;params&gt;</p>
 
     <p>
-      imgmod writes the raw image data to stdout. if no input flag is provided,
+      imgfx writes the raw image data to stdout. if no input flag is provided,
       it will expect raw image stdin. you can use this to pipe it into itself to
       create chains of effects. this is my favorite part of the program.
     </p>
@@ -49,6 +55,9 @@
   <fieldset class="column bordered">
     <legend>showcase</legend>
 
-    <div class="two-col-grid" id="imgmod-showcase"></div>
+    <div class="two-col-grid" id="imgfx-showcase"></div>
   </fieldset>
 </div>
+`;
+
+export default imgfxPage;

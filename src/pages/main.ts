@@ -15,9 +15,9 @@ const mainPage = `
 
     <fieldset class="column bordered">
       <legend>projects</legend>
-      <a href="/imgmod" onclick="navigate(event, '/imgmod')">imgmod</a>
+      <a href="/imgfx" onclick="navigate(event, '/imgfx')">imgfx</a>
+      <a href="/vidfx" onclick="navigate(event, '/vidfx')">vidfx</a>
       <a href="/ags" onclick="navigate(event, '/ags')">ags desktop</a>
-      <a href="/timesheet" onclick="navigate(event, '/timesheet')">timesheet-cli</a>
     </fieldset>
   </div>
 

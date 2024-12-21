@@ -1,20 +1,20 @@
 import './style.css';
 import mainPage from './pages/main';
-import imgmodPage from './pages/imgmod';
+import imgfxPage from './pages/imgfx';
 import research1Page from './pages/research1';
 import research2Page from './pages/research2';
 import coachPage from './pages/coach';
 import agsPage from './pages/ags';
-import timesheetPage from './pages/timesheet';
+import vidfxPage from './pages/vidfx';
 
 const routes = {
   '/': mainPage,
-  '/imgmod': imgmodPage,
+  '/imgfx': imgfxPage,
   '/research1': research1Page,
   '/research2': research2Page,
   '/coach': coachPage,
   '/ags': agsPage,
-  '/timesheet': timesheetPage,
+  '/vidfx': vidfxPage,
 };
 
 const app = document.querySelector<HTMLDivElement>('#app')!;
@@ -24,7 +24,7 @@ const render = () => {
   const path = window.location.pathname;
   app.innerHTML = routes[path as keyof typeof routes] || '<h1>Page Not Found</h1>';
 
-  if (path === '/imgmod') {
+  if (path === '/imgfx') {
     populateImages();
   }
 };
@@ -48,12 +48,12 @@ const images = [
 
 // Function to populate the image showcase on the `/imgmod.html` page
 const populateImages = () => {
-  const showcase = document.querySelector<HTMLDivElement>('#imgmod-showcase');
+  const showcase = document.querySelector<HTMLDivElement>('#imgfx-showcase');
   if (showcase) {
     showcase.innerHTML = images
       .map(
         (image) => `
-          <img class="gridItem" src="/imgmod/${image}" alt="${image}" style="margin: 10px;" />
+          <img class="gridItem" src="/imgfx/${image}" alt="${image}" style="margin: 10px;" />
         `
       )
       .join('');
