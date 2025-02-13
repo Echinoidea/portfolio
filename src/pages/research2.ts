@@ -1,7 +1,7 @@
 const research2Page = `
 <div>
   <fieldset class="title bordered">
-    <legend style="color: #a8b377">psych research #2</legend>
+    <legend style="color: #a8b377">research #2</legend>
     <p>
       progressive web app developer for pre-kindergarten psychology research
     </p>
@@ -9,11 +9,11 @@ const research2Page = `
 
   <fieldset class="column bordered" style="margin-top: 8px">
     <p>
-      this is a pwa written using next.js, intended for production use with
-      about 100 users, and eventually much more.
+      this is a progressive web app designed for use on ipads. the app will be used by pre-kindergarten teachers to collect data 
+      on their children, which will then be used for risk prediction and prevention. the data we are working with is sensitive and legally protected,
+      therefore a lot of effort is going into security and adherance to privacy laws. overall, it's very fun and a great learning experience working with 
+      this kind of data.
     </p>
-
-    <p>i'm not allowed to disclose details of the project here.</p>
   </fieldset>
 </div>
 `;

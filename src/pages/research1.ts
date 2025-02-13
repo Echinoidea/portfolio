@@ -17,7 +17,7 @@ const research1Page = `
     </p>
 
     <p>
-      this was my first real web development project. i worked with one other
+      this was my first production-level web development project. i worked with one other
       developer. we used supabase, next.js, nextauth, and chart.js
     </p>
   </fieldset>
