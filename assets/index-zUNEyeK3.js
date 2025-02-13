@@ -1,4 +1,4 @@
-(function(){const a=document.createElement("link").relList;if(a&&a.supports&&a.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))r(e);new MutationObserver(e=>{for(const t of e)if(t.type==="childList")for(const i of t.addedNodes)i.tagName==="LINK"&&i.rel==="modulepreload"&&r(i)}).observe(document,{childList:!0,subtree:!0});function l(e){const t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?t.credentials="include":e.crossOrigin==="anonymous"?t.credentials="omit":t.credentials="same-origin",t}function r(e){if(e.ep)return;e.ep=!0;const t=l(e);fetch(e.href,t)}})();const n=`
+(function(){const a=document.createElement("link").relList;if(a&&a.supports&&a.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))r(e);new MutationObserver(e=>{for(const t of e)if(t.type==="childList")for(const s of t.addedNodes)s.tagName==="LINK"&&s.rel==="modulepreload"&&r(s)}).observe(document,{childList:!0,subtree:!0});function n(e){const t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?t.credentials="include":e.crossOrigin==="anonymous"?t.credentials="omit":t.credentials="same-origin",t}function r(e){if(e.ep)return;e.ep=!0;const t=n(e);fetch(e.href,t)}})();const l=`
 <div>
   <fieldset class="title bordered">
     <legend>gabriel</legend>
@@ -27,7 +27,7 @@
     <a href="https://github.com/Echinoidea" target="_blank">github</a>
   </fieldset>
 </div>
-`,d=`
+`,p=`
 <div>
   <fieldset class="title bordered">
     <legend style="color: #a8b377">imgfx</legend>
@@ -87,7 +87,7 @@
     <div class="two-col-grid" id="imgfx-showcase"></div>
   </fieldset>
 </div>
-`,p=`
+`,d=`
 <div>
   <fieldset class="title bordered">
     <legend style="color: #a8b377">psych research #1</legend>
@@ -106,7 +106,7 @@
     </p>
 
     <p>
-      this was my first real web development project. i worked with one other
+      this was my first production-level web development project. i worked with one other
       developer. we used supabase, next.js, nextauth, and chart.js
     </p>
   </fieldset>
@@ -114,7 +114,7 @@
 `,c=`
 <div>
   <fieldset class="title bordered">
-    <legend style="color: #a8b377">psych research #2</legend>
+    <legend style="color: #a8b377">research #2</legend>
     <p>
       progressive web app developer for pre-kindergarten psychology research
     </p>
@@ -122,11 +122,11 @@
 
   <fieldset class="column bordered" style="margin-top: 8px">
     <p>
-      this is a pwa written using next.js, intended for production use with
-      about 100 users, and eventually much more.
+      this is a progressive web app designed for use on ipads. the app will be used by pre-kindergarten teachers to collect data 
+      on their children, which will then be used for risk prediction and prevention. the data we are working with is sensitive and legally protected,
+      therefore a lot of effort is going into security and adherance to privacy laws. overall, it's very fun and a great learning experience working with 
+      this kind of data.
     </p>
-
-    <p>i'm not allowed to disclose details of the project here.</p>
   </fieldset>
 </div>
 `,g=`
@@ -154,7 +154,7 @@
     </p>
   </fieldset>
 </div>
-`,f=`
+`,h=`
 <div>
   <fieldset class="title bordered">
     <legend style="color: #a8b377">ags desktop</legend>
@@ -199,7 +199,7 @@
     </div>
   </fieldset>
 </div>
-`,m=`
+`,f=`
 <div>
   <fieldset class="title bordered">
     <legend style="color: #a8b377">vidfx</legend>
@@ -210,22 +210,41 @@
 
   <fieldset class="column bordered" style="gap: 16px">
     <legend>usage</legend>
-    <div>
-      <p>operations:</p>
-      <p>- or</p>
-      <p>- and</p>
-      <p>- xor</p>
-      <p>- left</p>
-      <p>- right</p>
-      <p>- add</p>
-      <p>- sub</p>
-      <p>- mult</p>
-      <p>- div</p>
-      <p>- avg</p>
-      <p>- screen</p>
-      <p>- overlay</p>
-      <p>- bloom</p>
-    </div>
+        <p>Usage: vidfx-cli [OPTIONS] --input &lt;INPUT&gt; &lt;COMMAND&gt;
+
+        <div style="gap: 4px">
+        <p>Commands:</p>
+          <p>or</p>
+          <p>and</p>
+          <p>xor</p>
+          <p>left</p>
+          <p>right</p>
+          <p>add</p>
+          <p>sub</p>
+          <p>mult</p>
+          <p>pow</p>
+          <p>div</p>
+          <p>average</p>
+          <p>screen</p>
+          <p>overlay</p>
+          <p>bloom</p>
+          <p>sort</p>
+          <p>filter</p>
+          <p>help     Print this message or the help of the given subcommand(s)</p>
+        <br/>
+        <p>Options:</p>
+          <p>-i, --input <lt;INPUT&gt;                  path/to/input/image</p>
+              <p>--output <lt;OUTPUT&gt;                path/to/output/image [default: .]</p>
+          <p>-v, --visualization <lt;VISUALIZATION&gt;  [default: default]</p>
+          <p>-b, --bpm <lt;BPM&gt;</p>
+              <p>--lhs <lt;LHS&gt;...                   Specify the left hand side operands for the function. E.g. --lhs b g r</p>
+              <p>--rhs <lt;RHS&gt;...                   Specify the right hand side operands for the function. E.g. --rhs b r b</p>
+          <p>-b, --bit-shift <lt;BIT_SHIFT&gt;          If function is 'left' or 'right', how many bits to shift by</p>
+          <p>-n, --negate                         Negate the logical operator</p>
+          <p>-h, --help                           Print help</p>
+          <p>-V, --version                        Print version</p>
+        </p>
+</div>
 
     <p>vidfx -i &lt;path/to/input&gt; &lt;visualization?&gt; &lt;bpm?&gt; &lt;operation&gt; &lt;params&gt;</p>
 
@@ -234,13 +253,7 @@
       i want to eventually allow the user to specify an audio frequency range and then modulate the effect based on the amplitude of that range e.g. kick drum.
     </p>
   </fieldset>
-
-  <fieldset class="column bordered">
-    <legend>showcase</legend>
-
-    <div class="two-col-grid" id="imgfx-showcase"></div>
-  </fieldset>
 </div>
-`,h={"/":n,"/imgfx":d,"/research1":p,"/research2":c,"/coach":g,"/ags":f,"/vidfx":m},u=document.querySelector("#app"),o=()=>{const s=window.location.pathname;u.innerHTML=h[s]||"<h1>Page Not Found</h1>",s==="/imgfx"&&y()},v=(s,a)=>{s.preventDefault(),history.pushState(null,"",a),o()};window.navigate=v;const w=["ultrakill.png","ultrakill-out.png","vash.jpg","vash-out.jpg","gasha-sm.gif","gasha-sm-out.png"],y=()=>{const s=document.querySelector("#imgfx-showcase");s&&(s.innerHTML=w.map(a=>`
+`,m={"/":l,"/imgfx":p,"/research1":d,"/research2":c,"/coach":g,"/ags":h,"/vidfx":f},u=document.querySelector("#app"),o=()=>{const i=window.location.pathname;u.innerHTML=m[i]||"<h1>Page Not Found</h1>",i==="/imgfx"&&y()},v=(i,a)=>{i.preventDefault(),history.pushState(null,"",a),o()};window.navigate=v;const b=["ultrakill.png","ultrakill-out.png","vash.jpg","vash-out.jpg","gasha-sm.gif","gasha-sm-out.png"],y=()=>{const i=document.querySelector("#imgfx-showcase");i&&(i.innerHTML=b.map(a=>`
           <img class="gridItem" src="/imgfx/${a}" alt="${a}" style="margin: 10px;" />
         `).join(""))};o();window.addEventListener("popstate",o);
